@@ -104,3 +104,6 @@ blockquote{margin:0 0 var(--space-lg);padding:var(--space-md) var(--space-lg);bo
 .footer-bottom-links{display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem 1rem}
 .footer-bottom-links a{color:rgba(255,255,255,0.78);font-size:0.84rem;font-weight:500;text-decoration:underline;text-decoration-color:rgba(229,184,153,0.3);text-decoration-thickness:1px;text-underline-offset:4px;transition:color 0.4s ease,text-decoration-color 0.4s ease}
 .footer-bottom-links a:hover,.footer-bottom-links a:focus{color:var(--highlight-peach);text-decoration-color:var(--highlight-peach)}
+.answer .disclosure{font-size:0.9rem;line-height:1.5;margin:0 0 var(--space-xl);padding:var(--space-md) var(--space-lg);border-left:3px solid var(--text-copper-aaa);background:rgba(0,0,0,0.03)}
+.answer .author-bio{margin:var(--space-xl) 0 0;padding:var(--space-lg);border-top:1px solid rgba(0,0,0,0.12);font-size:0.9rem;line-height:1.55}
+.answer .author-bio p{margin:0}
