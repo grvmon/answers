@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://answers.acrenkey.com/sitemap.xml

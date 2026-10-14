@@ -1,5 +1,12 @@
 # acreNkey Answers
 
-acreNkey answers hub for East Bengaluru homebuyers.
+acreNkey answers hub for East Bengaluru homebuyers, served at https://answers.acrenkey.com/.
 
-Content lives in `/answers/<slug>.md` (Markdown with YAML front-matter). Each page ends with a `## Structured data` section holding FAQPage JSON-LD in a fenced json block; this still needs wiring into the site template as a `<script type="application/ld+json">` tag.
+Plain static HTML, no build step or framework:
+
+- `index.html`: the hub listing every answered question
+- `<slug>/index.html`: one answer page per question (URL `/<slug>/`)
+- `assets/style.css`: one shared stylesheet built from the acre&key style guide (https://acrenkey.com/style-guide/)
+- `sitemap.xml`, `robots.txt`
+
+Each answer page carries its FAQPage and BreadcrumbList JSON-LD in `<script type="application/ld+json">` tags in `<head>`. Host the repo root as-is (e.g. GitHub Pages, Netlify or Cloudflare Pages) on answers.acrenkey.com.
