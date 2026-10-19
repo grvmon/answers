@@ -418,13 +418,6 @@
         if (path.indexOf("riviera-uno") !== -1) return "Riviera Uno";
         if (path.indexOf("sumadhura-solace") !== -1) return "Sumadhura Solace";
 
-        var h1 = document.querySelector("h1");
-        if (h1) {
-          var txt = h1.textContent.trim();
-          if (txt && txt.length < 40 && !/anyone|welcome|home|buy/i.test(txt)) {
-            return txt;
-          }
-        }
         return "";
       };
 
@@ -443,7 +436,7 @@
         if (formNameInput) formNameInput.value = formName || "custom_enquiry";
       } else if (ctx === 'analysis' || ctx === 'buyer-analysis' || ctx === 'diligence' || fn.indexOf('buyer_analysis') !== -1 || fn.indexOf('diligence') !== -1) {
         mainText = "Get Buyer Analysis";
-        subText = "Access unit-wise pricing breakdown, high-floor premium analysis, RERA timeline risks, and independent Acre&Key score.";
+        subText = "Access unit-wise pricing breakdown, high-floor premium analysis, RERA timeline risks, and independent acre&key score.";
         btnLabel = "Download Buyer Analysis (PDF)";
         if (formNameInput) formNameInput.value = formName || "buyer_analysis";
       } else if (ctx === 'brochure' || ctx.indexOf('brochure') !== -1 || fn.indexOf('brochure') !== -1) {
@@ -463,12 +456,12 @@
         if (formNameInput) formNameInput.value = formName || "floorplan_enquiry";
       } else if (ctx === 'sitevisit' || ctx === 'visit' || fn.indexOf('visit') !== -1) {
         mainText = "Schedule a Site Visit";
-        subText = "Book an accompanied private site visit with an Acre&Key project specialist.";
+        subText = "Book an accompanied private site visit with an acre&key project specialist.";
         btnLabel = "Schedule Private Visit";
         if (formNameInput) formNameInput.value = formName || "site_visit";
       } else {
         mainText = "Schedule Your Consultation";
-        subText = proj ? "Get unbiased property guidance, verified unit pricing, and independent Acre&Key diligence for " + proj + "." : "Get unbiased property guidance, detailed pricing, and independent diligence reports.";
+        subText = proj ? "Get unbiased property guidance, verified unit pricing, and independent acre&key diligence for " + proj + "." : "Get unbiased property guidance, detailed pricing, and independent diligence reports.";
         btnLabel = proj ? "Request Advisor Callback" : "Request Advisory Call";
         if (formNameInput) formNameInput.value = formName || "general_enquiry";
       }
