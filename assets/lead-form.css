@@ -1,6 +1,3 @@
-/* Consultation modal styles copied verbatim from acrenkey.com (grvmon/a-K lead-form.min.css @ f5a688e). Do not edit here; re-copy. */
-/* Homepage :root tokens the modal reads (values from grvmon/a-K website.min.css), scoped to the modal so blog tokens are untouched. */
-#lfModalOverlay{--cta-gradient:linear-gradient(135deg, #e88d67 0%, #9e3f23 100%);--divider:#55555a33;--font-body:"Manrope",sans-serif;--highlight-peach:#e88d67;--neutral-grey:#55555a;--obsidian-black:#2b2d31;--shadow-lux:0 12px 32px -8px #2b2d311f,0 4px 12px #2b2d310a;--text-copper-aaa:#804526;--titanium-frost:#fafafa;--muted-slate:#55555a}
 
 /* =========================================
    HNI LUXURY OVERRIDES 
