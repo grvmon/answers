@@ -31,6 +31,7 @@ a:hover{text-decoration-color:currentColor}
 .kicker{font-family:var(--font-sans);font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;line-height:1.2;color:var(--text-copper-aaa);margin:0 0 var(--space-md);border:0;padding:0}
 .kicker-dark{color:var(--highlight-peach)}
 .lead{font-size:1.05rem;max-width:var(--measure)}
+.hero .lead{max-width:1100px}
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 var(--space-lg);border-radius:var(--radius);font-family:var(--font-sans);font-weight:600;font-size:0.85rem;text-decoration:none;transition:transform 120ms var(--apple-spring),background var(--duration-base) var(--easing-base)}
 .btn:active{transform:scale(0.975)}
