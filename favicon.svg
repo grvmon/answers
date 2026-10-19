@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Navy blue background with premium rounded corners -->
+  <rect width="32" height="32" rx="6" fill="#1F2B38"/>
+  
+  <!-- Josefin Sans geometric lowercase 'a' shape in white -->
+  <path d="M21 11 V23 H19 V21.7 C18.1 22.7 16.7 23.3 15 23.3 C11.5 23.3 8.7 20.5 8.7 17 C8.7 13.5 11.5 10.7 15 10.7 C16.7 10.7 18.1 11.3 19 12.3 V11 H21 Z M15 12.7 C12.6 12.7 10.7 14.6 10.7 17 C10.7 19.4 12.6 21.3 15 21.3 C17.4 21.3 19.3 19.4 19.3 17 C19.3 14.6 17.4 12.7 15 12.7 Z" fill="#FFFFFF"/>
+</svg>
