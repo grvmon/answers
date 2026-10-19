@@ -2,7 +2,7 @@
 :root{--deep-navy:#2b2d31;--muted-slate:#55555a;--dark-brass:#804526;--refined-brass:#804526;--highlight-gold:#804526;--highlight-peach:#e88d67;--white:#fff;--font-body:"Manrope",sans-serif;--font-heading:"Cormorant Garamond",serif;--font-logo:"Josefin Sans";--transition-fast:.4s ease;}
 .header-nav{z-index:1000;background:0 0;border-bottom:.5px solid #2b2d3126;border-radius:0;width:100%;max-width:100%;transition:background .4s,box-shadow .4s,border-color .4s;position:fixed;top:0;left:0;right:0}
 .header-nav.scrolled{-webkit-backdrop-filter:blur(16px);background:#2b2d31e6;border-bottom:.5px solid #ffffff1f;box-shadow:none!important}
-.nav-container{justify-content:space-between;align-items:center;height:88px;padding-top:4px;padding-bottom:4px;display:flex}
+.nav-container{justify-content:space-between;align-items:center;height:80px;padding:0 2rem;display:flex}
 .nav-brand{flex-direction:column;margin-right:10px;text-decoration:none;display:flex}
 .brand-logo-text{font-family:var(--font-logo);text-transform:lowercase;color:var(--deep-navy);letter-spacing:-.02em;font-size:2.2rem;font-style:normal;font-weight:300;line-height:1}
 .nav-links{align-items:center;gap:1rem;list-style:none;display:flex}
@@ -224,7 +224,10 @@ body{padding-top:80px}
 @media (width<=991px){.header-nav .container,.site-footer .container{padding:0 20px}}
 
 
-/* Fixed Acre&Key Header Alignment (100% matched to acrenkey.com) */
+
+/* ========================================================
+   Definitive Header & Nav Alignment (100% acrenkey.com Homepage)
+   ======================================================== */
 .header-nav {
   position: fixed !important;
   top: 0 !important;
@@ -232,11 +235,15 @@ body{padding-top:80px}
   right: 0 !important;
   width: 100% !important;
   height: 80px !important;
+  max-height: 80px !important;
   background: #2b2d31e6 !important;
   -webkit-backdrop-filter: blur(16px) !important;
   backdrop-filter: blur(16px) !important;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.12) !important;
   z-index: 1000 !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .header-nav .nav-container {
@@ -244,16 +251,22 @@ body{padding-top:80px}
   margin: 0 auto !important;
   padding: 0 2rem !important;
   height: 80px !important;
+  min-height: 80px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
+  box-sizing: border-box !important;
 }
 
 .header-nav .nav-brand {
-  display: flex !important;
+  display: inline-flex !important;
   align-items: center !important;
+  justify-content: center !important;
   text-decoration: none !important;
   margin: 0 !important;
+  padding: 0 !important;
+  height: 80px !important;
+  line-height: 1 !important;
 }
 
 .header-nav .brand-logo-text {
@@ -263,16 +276,30 @@ body{padding-top:80px}
   color: #FAFAFA !important;
   letter-spacing: -0.02em !important;
   line-height: 1 !important;
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
   text-transform: lowercase !important;
+  vertical-align: middle !important;
 }
 
 .header-nav .nav-links {
   display: flex !important;
   align-items: center !important;
+  justify-content: center !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
   gap: 28px !important;
+  height: 80px !important;
+}
+
+.header-nav .nav-links li {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
 }
 
 .header-nav .nav-links a {
@@ -284,13 +311,51 @@ body{padding-top:80px}
   color: #FAFAFA !important;
   opacity: 0.9 !important;
   text-decoration: none !important;
+  line-height: 1 !important;
   padding: 6px 0 !important;
+  margin: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
   transition: color 0.4s ease, opacity 0.4s ease !important;
 }
 
 .header-nav .nav-links a:hover {
   color: #E88D67 !important;
   opacity: 1 !important;
+}
+
+.header-nav .nav-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 16px 0 24px !important;
+  gap: 12px !important;
+  border-radius: 4px !important;
+  font-family: var(--font-body, 'Manrope', sans-serif) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #FFFFFF !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.header-nav .nav-cta-btn:hover {
+  background: linear-gradient(135deg, #c78162 0%, #9f5334 100%) !important;
+  box-shadow: none !important;
+  border: none !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px) !important;
 }
 
 @media (max-width: 1200px) {
