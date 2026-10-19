@@ -222,3 +222,89 @@ body{padding-top:80px}
 /* a-K .container, scoped to the copied header/footer */
 .header-nav .container,.site-footer .container{max-width:1280px;margin:0 auto;padding:0 2rem}
 @media (width<=991px){.header-nav .container,.site-footer .container{padding:0 20px}}
+
+
+/* Fixed Acre&Key Header Alignment (100% matched to acrenkey.com) */
+.header-nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 80px !important;
+  background: #2b2d31e6 !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  backdrop-filter: blur(16px) !important;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.12) !important;
+  z-index: 1000 !important;
+}
+
+.header-nav .nav-container {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+  height: 80px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.header-nav .nav-brand {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  margin: 0 !important;
+}
+
+.header-nav .brand-logo-text {
+  font-family: var(--font-logo, 'Josefin Sans', sans-serif) !important;
+  font-size: 2.2rem !important;
+  font-weight: 300 !important;
+  color: #FAFAFA !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1 !important;
+  text-transform: lowercase !important;
+}
+
+.header-nav .nav-links {
+  display: flex !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 28px !important;
+}
+
+.header-nav .nav-links a {
+  font-family: var(--font-body, 'Manrope', sans-serif) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: #FAFAFA !important;
+  opacity: 0.9 !important;
+  text-decoration: none !important;
+  padding: 6px 0 !important;
+  transition: color 0.4s ease, opacity 0.4s ease !important;
+}
+
+.header-nav .nav-links a:hover {
+  color: #E88D67 !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 1200px) {
+  .header-nav .nav-links {
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-nav .nav-links,
+  .header-nav .nav-cta-btn {
+    display: none !important;
+  }
+  .header-nav .nav-container {
+    padding: 0 20px !important;
+  }
+}
