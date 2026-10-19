@@ -77,3 +77,40 @@ blockquote{margin:0 0 var(--space-lg);padding:var(--space-md) var(--space-lg);bo
 /* mobile: no horizontal scroll from long links or wide tables */
 main a{overflow-wrap:anywhere;word-break:break-word}
 main table{display:block;max-width:100%;overflow-x:auto}
+
+/* Hub enhancements: Search bar with shortcut + clear button */
+.search-box-wrap{position:relative;margin-top:var(--space-lg);display:flex;align-items:center}
+.search-icon{position:absolute;left:16px;color:var(--neutral-grey);pointer-events:none;display:flex;align-items:center}
+.search-box-wrap .search{padding-left:46px;padding-right:72px;margin-top:0}
+.search-shortcut{position:absolute;right:16px;font-family:var(--font-sans);font-size:0.75rem;font-weight:600;color:var(--neutral-grey);background:rgba(85,85,90,0.1);padding:2px 8px;border-radius:4px;border:0.5px solid rgba(85,85,90,0.25);pointer-events:none;line-height:1.2}
+.search-clear-btn{position:absolute;right:14px;background:none;border:none;padding:6px;cursor:pointer;color:var(--neutral-grey);display:flex;align-items:center;justify-content:center;border-radius:4px;transition:color var(--duration-base) var(--easing-base)}
+.search-clear-btn:hover{color:var(--obsidian-black)}
+
+/* Filter Pills */
+.filter-pills-wrap{margin-top:var(--space-md);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filter-pill{appearance:none;background:var(--pure-white);color:var(--neutral-grey);border:var(--border-width) solid var(--border-color);border-radius:20px;padding:6px 14px;font-family:var(--font-sans);font-size:0.8rem;font-weight:600;cursor:pointer;transition:all var(--duration-base) var(--easing-base);display:inline-flex;align-items:center;gap:6px;line-height:1.3}
+.filter-pill:hover{border-color:var(--text-copper-aaa);color:var(--obsidian-black)}
+.filter-pill.active{background:var(--obsidian-black);color:var(--pure-white);border-color:var(--obsidian-black)}
+.filter-pill .pill-count{font-size:0.75rem;opacity:0.75;font-weight:500}
+.filter-pill.active .pill-count{opacity:0.85;color:var(--highlight-peach)}
+
+/* Featured Starter Questions Grid */
+.featured-cluster{margin-top:var(--space-xl);padding-top:var(--space-lg);border-top:var(--border-width) solid var(--border-color)}
+.featured-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:var(--space-md)}
+@media (min-width:768px){.featured-grid{grid-template-columns:repeat(2,1fr)}}
+.featured-card{display:flex;flex-direction:column;justify-content:space-between;background:var(--pure-white);border:var(--border-width) solid var(--border-color);border-radius:var(--radius);padding:18px 20px;text-decoration:none;transition:border-color var(--duration-base) var(--easing-base),transform 150ms var(--apple-spring),box-shadow var(--duration-base) var(--easing-base)}
+.featured-card:hover{border-color:var(--text-copper-aaa);box-shadow:0 4px 16px rgba(43,45,49,0.06);transform:translateY(-2px)}
+.featured-card .badge{align-self:flex-start;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-copper-aaa);background:rgba(232,141,103,0.12);padding:3px 8px;border-radius:3px;margin-bottom:8px}
+.featured-card .card-q{font-family:var(--font-serif);font-size:1.15rem;line-height:1.3;color:var(--obsidian-black);margin:0 0 8px;font-weight:500}
+.featured-card:hover .card-q{color:var(--text-copper-aaa)}
+.featured-card .card-d{font-size:0.85rem;line-height:1.5;color:var(--neutral-grey);margin:0 0 12px;flex-grow:1}
+.featured-card .card-cta{font-size:0.8rem;font-weight:600;color:var(--text-copper-aaa);display:inline-flex;align-items:center;gap:4px}
+.featured-card .card-cta svg{transition:transform 150ms var(--apple-spring)}
+.featured-card:hover .card-cta svg{transform:translateX(4px)}
+
+/* Card badges & hover arrow in main qlist */
+.qlist a{position:relative;padding-right:32px}
+.qlist-item-meta{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.qlist-tag{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-copper-aaa);background:rgba(232,141,103,0.1);padding:2px 7px;border-radius:3px}
+.qlist-arrow{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:var(--text-copper-aaa);opacity:0;transition:opacity var(--duration-base) var(--easing-base),transform 150ms var(--apple-spring)}
+.qlist a:hover .qlist-arrow{opacity:1;transform:translate(4px,-50%)}
