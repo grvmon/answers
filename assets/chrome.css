@@ -46,8 +46,8 @@ body.page-404 .header-nav{z-index:1000;background:#fafafa;border-bottom:.5px sol
 .header-nav,.header-nav.scrolled{border-bottom:none!important}
 .nav-links{gap:28px!important}
 .nav-links a{letter-spacing:.1em!important;padding:6px 0!important;font-size:.82rem!important}
-.nav-brand{margin-right:32px!important}
-@media (width<=1200px){.nav-links{gap:16px!important}.nav-brand{margin-right:16px!important}}
+/* .nav-brand{margin-right:32px!important} */
+@media (width<=1200px){.nav-links{gap:16px!important}/* .nav-brand{margin-right:16px!important} */}
 .header-nav.transparent-header:not(.scrolled) .nav-cta-btn{color:#fff!important;background:0 0!important;border:.5px solid #fff6!important}
 .header-nav.transparent-header:not(.scrolled) .nav-cta-btn:hover{color:#fff!important;background:#ffffff1a!important}
 .header-nav:not(.scrolled):not(.transparent-header){-webkit-backdrop-filter:blur(16px)!important;box-shadow:none!important;background:#2b2d31e6!important;border-bottom:.5px solid #ffffff1f!important}
