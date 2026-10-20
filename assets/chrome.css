@@ -183,7 +183,7 @@ body.page-404 .header-nav{z-index:1000;background:#fafafa;border-bottom:.5px sol
 .ak-btn-primary:active,.ak-btn-secondary:active,.primary-cta-btn:active,.nav-cta-btn:active,.sd-btn-gold:active,.btn-secondary:active,.mobile-drawer-cta:active,.form-submit-btn:active,.lf-page-cta-btn:active,.faq-filter-btn:active{transform:scale(.975)!important}
 @media (prefers-reduced-transparency:reduce){.header-nav,.header-nav.scrolled,.mobile-menu-drawer,.ds-nav,.metrics-strip{-webkit-backdrop-filter:none!important;background:#2b2d31!important}}
 .primary-cta-btn,.nav-cta-btn,.premium-inline-cta,.mobile-drawer-cta,.lf-btn,#lfSubmitBtn,.header-nav.scrolled .primary-cta-btn{    display: inline-flex !important;    align-items: center !important;    justify-content: center !important;    height: 48px !important;    min-height: 48px !important;    padding: 0 16px 0 24px !important;    gap: 12px !important;    border-radius: 4px !important;    font-family: var(--font-body), 'Manrope', sans-serif !important;    font-size: 15px !important;    font-weight: 600 !important;    letter-spacing: 0.02em !important;    text-transform: none !important;    text-decoration: none !important;    box-sizing: border-box !important;    background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;    border: none !important;    box-shadow: none !important;    color: #FFFFFF !important;    cursor: pointer !important;    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease, box-shadow 0.4s ease !important;}
-.primary-cta-btn:hover,.nav-cta-btn:hover,.premium-inline-cta:hover,.mobile-drawer-cta:hover,.lf-btn:hover,#lfSubmitBtn:hover,.header-nav.scrolled .primary-cta-btn:hover{    background: linear-gradient(135deg, #c78162 0%, #9f5334 100%) !important;    box-shadow: none !important;    border: none !important;    color: #FFFFFF !important;}
+.primary-cta-btn:hover,.nav-cta-btn:hover,.premium-inline-cta:hover,.mobile-drawer-cta:hover,.lf-btn:hover,#lfSubmitBtn:hover,.header-nav.scrolled .primary-cta-btn:hover{    background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;    box-shadow: none !important;    border: none !important;    color: #FFFFFF !important;}
 .primary-cta-btn > span:not(.cta-arrow-badge),.nav-cta-btn > span:not(.cta-arrow-badge),.premium-inline-cta > span:not(.cta-arrow-badge),.mobile-drawer-cta > span:not(.cta-arrow-badge),.lf-btn > span:not(.cta-arrow-badge){    display: inline-flex !important;    align-items: center !important;    justify-content: center !important;    margin: 0 !important;    padding: 0 !important;    gap: 0 !important;    width: auto !important;    flex: 0 0 auto !important;    line-height: 1 !important;    white-space: nowrap !important;}
 .cta-arrow-badge{    display: inline-flex !important;    align-items: center !important;    justify-content: center !important;    width: 24px !important;    height: 24px !important;    min-width: 24px !important;    min-height: 24px !important;    border-radius: 4px !important;    border: 1px solid rgba(255, 255, 255, 0.45) !important;    background: rgba(255, 255, 255, 0.08) !important;    color: #FFFFFF !important;    margin: 0 !important;    padding: 0 !important;    flex-shrink: 0 !important;    flex-grow: 0 !important;    box-sizing: border-box !important;    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;}
 .cta-arrow-badge svg{    width: 11px !important;    height: 11px !important;    stroke: currentColor !important;    stroke-width: 1.8 !important;    display: block !important;    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;}
@@ -351,11 +351,11 @@ body{padding-top:80px}
 }
 
 .header-nav .nav-cta-btn:hover {
-  background: linear-gradient(135deg, #c78162 0%, #9f5334 100%) !important;
+  background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
   box-shadow: none !important;
   border: none !important;
   color: #FFFFFF !important;
-  transform: translateY(-1px) !important;
+  transform: none !important;
 }
 
 @media (max-width: 1200px) {
