@@ -373,3 +373,25 @@ body{padding-top:80px}
     padding: 0 20px !important;
   }
 }
+
+/* compact footer, copied from acrenkey.com (grvmon/a-K website.src.css) */
+.site-footer.ak-footer{padding:28px 0 22px!important;font-size:13px;color:#e1e6eb!important;text-align:left}
+.ak-footer .ak-footer-inner{display:flex;flex-direction:column;gap:14px;max-width:1280px;margin:0 auto;padding:0 32px}
+.ak-footer .ak-footer-row{margin:0;display:flex;align-items:center;flex-wrap:wrap}
+.ak-footer .ak-footer-top{justify-content:space-between;gap:16px 28px;flex-wrap:nowrap}
+.ak-footer .ak-footer-brand{display:flex;flex-direction:column;gap:4px;min-width:0;flex:0 0 440px}
+.ak-footer .ak-footer-logo{font-size:24px!important;line-height:1.1;margin:0!important}
+.ak-footer a{color:#e1e6eb;text-decoration:none;transition:color .3s}
+.ak-footer a:hover{color:#e88d67;text-decoration:underline;text-underline-offset:3px}
+.ak-footer .ak-footer-address{font-size:12.5px;line-height:1.45;color:#c9cfd6}
+.ak-footer .ak-footer-links{display:flex;flex-wrap:wrap;justify-content:center;flex:1 1 auto;gap:4px 18px;font-size:13.5px}
+.ak-footer .ak-footer-social{display:flex;gap:8px;flex-wrap:nowrap;margin:0}
+.ak-footer .ak-footer-social .footer-social-btn{width:32px;height:32px}
+.ak-footer .ak-footer-rera{justify-content:center;text-align:center;font-size:12.5px;color:#c9cfd6;border-top:.5px solid #ffffff1f;padding-top:14px}
+.ak-footer .ak-footer-bottom{justify-content:center;text-align:center;gap:4px 16px;font-size:12.5px;color:#c9cfd6}
+.ak-footer .ak-footer-bottom a{color:#c9cfd6}
+@media (width<=900px){.ak-footer .ak-footer-top{flex-direction:column;flex-wrap:wrap;text-align:center}.ak-footer .ak-footer-brand{align-items:center;flex-basis:auto}.ak-footer .ak-footer-links{gap:0 6px}.ak-footer .ak-footer-links a,.ak-footer .ak-footer-bottom a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px}.ak-footer .ak-footer-social{flex-wrap:wrap;justify-content:center}.ak-footer .ak-footer-social .footer-social-btn{width:44px;height:44px}.ak-footer .ak-footer-address{display:inline-flex;align-items:center;min-height:44px;max-width:340px}.ak-footer .ak-footer-inner{padding:0 18px;gap:10px}.ak-footer .ak-footer-bottom{gap:0 4px}.site-footer.ak-footer{padding:24px 0 max(96px,env(safe-area-inset-bottom))!important}}
+.related-ak li{margin-bottom:.4rem}.related-ak a{display:inline-block;padding:.35rem 0}
+/* mobile tap targets (QC 2026-10-20) */
+.author-linkedin-badge{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin:-15px -12px}
+.search-clear-btn{min-width:44px;min-height:44px}
