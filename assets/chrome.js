@@ -1,15 +1,6 @@
-/* Header scroll state + mobile drawer, copied from acrenkey.com (grvmon/a-K website.min.js) */
+/* Header + mobile drawer, 100% matched with acrenkey.com homepage */
 const headerNav = document.getElementById('header-nav');
-
-window.addEventListener('scroll', function () {
-    if (headerNav) {
-        if (window.scrollY > 30) {
-            headerNav.classList.add('scrolled');
-        } else {
-            headerNav.classList.remove('scrolled');
-        }
-    }
-}, { passive: true });
+// Header is permanently fixed with solid backdrop blur, matching acrenkey.com
 
 function ensureHeaderCtaBadges() {
     var navCtas = document.querySelectorAll('.header-nav .nav-cta-btn, .header-nav .primary-cta-btn, .header-nav .mobile-drawer-cta');

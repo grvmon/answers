@@ -1,7 +1,6 @@
 /* Site chrome copied from acrenkey.com homepage (grvmon/a-K website.min.css): header, mobile drawer, footer */
 :root{--deep-navy:#2b2d31;--muted-slate:#55555a;--dark-brass:#804526;--refined-brass:#804526;--highlight-gold:#804526;--highlight-peach:#e88d67;--white:#fff;--font-body:"Manrope",sans-serif;--font-heading:"Cormorant Garamond",serif;--font-logo:"Josefin Sans";--transition-fast:.4s ease;}
-.header-nav{z-index:1000;background:0 0;border-bottom:.5px solid #2b2d3126;border-radius:0;width:100%;max-width:100%;transition:background .4s,box-shadow .4s,border-color .4s;position:fixed;top:0;left:0;right:0}
-.header-nav.scrolled{-webkit-backdrop-filter:blur(16px);background:#2b2d31e6;border-bottom:.5px solid #ffffff1f;box-shadow:none!important}
+.header-nav{z-index:1000;background:#2b2d31e6!important;-webkit-backdrop-filter:blur(16px)!important;backdrop-filter:blur(16px)!important;border-bottom:.5px solid rgba(255,255,255,0.12)!important;border-radius:0;width:100%;max-width:100%;position:fixed;top:0;left:0;right:0;height:80px!important}
 .nav-container{justify-content:space-between;align-items:center;height:80px;padding:0 2rem;display:flex}
 .nav-brand{flex-direction:column;margin-right:10px;text-decoration:none;display:flex}
 .brand-logo-text{font-family:var(--font-logo);text-transform:lowercase;color:var(--deep-navy);letter-spacing:-.02em;font-size:2.2rem;font-style:normal;font-weight:300;line-height:1}
