@@ -171,3 +171,11 @@ main table{display:block;max-width:100%;overflow-x:auto}
 @media (max-width:767px){.answer p,.answer li{font-size:1rem}}
 .helpful-btn{min-height:44px}
 @media (width<=991px){.mobile-drawer-socials a{width:44px!important;height:44px!important}}
+/* uiqc 2026-10-20 (visible, pending approval): mobile table text + 44px tap targets */
+@media (max-width:767px){
+.table-wrap td,.table-wrap th{font-size:0.95rem}
+.author-name-link,.author-bio-name{display:inline-flex!important;align-items:center;min-height:44px}
+.ak-footer .footer-logo-wordmark{display:inline-flex;align-items:center;min-height:44px}
+.ak-footer .ak-footer-links a{min-width:44px;justify-content:center}
+.ak-footer .ak-footer-links{row-gap:8px}
+}
