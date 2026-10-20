@@ -167,3 +167,7 @@ main table{display:block;max-width:100%;overflow-x:auto}
 .helpful-thanks{font-size:0.88rem;color:var(--text-copper-aaa);font-weight:600;display:none}
 .helpful-widget.voted .helpful-actions{display:none}
 .helpful-widget.voted .helpful-thanks{display:inline-block}
+/* uiqc 2026-10-20: a11y tap/font minimums */
+@media (max-width:767px){.answer p,.answer li{font-size:1rem}}
+.helpful-btn{min-height:44px}
+@media (width<=991px){.mobile-drawer-socials a{width:44px!important;height:44px!important}}
