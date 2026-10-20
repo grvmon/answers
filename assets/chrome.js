@@ -83,3 +83,24 @@ closeMobileDrawer();
 });
 });
 }
+
+/* Share buttons copy link handler */
+document.addEventListener('DOMContentLoaded', function() {
+  var copyButtons = document.querySelectorAll('[data-copy-link]');
+  copyButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var done = function () {
+        var original = button.getAttribute('title') || 'Copy article link';
+        button.setAttribute('title', 'Link copied');
+        button.style.color = '#804526';
+        window.setTimeout(function () {
+          button.setAttribute('title', original);
+          button.style.color = '';
+        }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(window.location.href).then(done).catch(function () {});
+      }
+    });
+  });
+});
