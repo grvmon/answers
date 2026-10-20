@@ -154,7 +154,8 @@ main table{display:block;max-width:100%;overflow-x:auto}
 
 /* Share Strip - 100% parity with blogs */
 /* Share Strip - 100% exact parity with acrenkey.com/blogs/ */
-.share-strip{display:flex;align-items:center;gap:var(--space-sm);margin-left:auto}
+.share-strip{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-sm);margin-left:auto}
+.author-meta-wrap .share-strip{margin-left:0;align-self:flex-start;margin-top:6px}
 .share-label{font-size:0.78rem;font-weight:700;color:var(--neutral-grey);text-transform:uppercase;letter-spacing:0.08em}
 .share-btn{width:44px;height:44px;min-width:44px;min-height:44px;padding:0!important;margin:0!important;box-sizing:border-box!important;display:inline-flex;align-items:center;justify-content:center;border:0.5px solid rgba(85,85,90,0.15)!important;border-radius:4px!important;background:#FFFFFF!important;color:var(--neutral-grey)!important;text-decoration:none!important;cursor:pointer;outline:none;transition:all 0.3s ease}
 .share-btn:hover{border-color:var(--text-copper-aaa)!important;color:var(--text-copper-aaa)!important;background:#FAFAFA!important}
