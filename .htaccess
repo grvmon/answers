@@ -1,0 +1,7 @@
+# 301s for merged answers
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^choose-real-estate-consultancy-firm-bangalore/?$ /how-to-choose-real-estate-consultant-bangalore/ [R=301,L]
+RewriteRule ^what-does-real-estate-investment-consultant-do/?$ /what-does-real-estate-consultant-bangalore-do/ [R=301,L]
+RewriteRule ^what-are-real-estate-consultancy-services/?$ /what-does-real-estate-consultant-bangalore-do/ [R=301,L]
+</IfModule>

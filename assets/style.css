@@ -141,3 +141,4 @@ main table{display:block;max-width:100%;overflow-x:auto}
 .qlist-tag{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-copper-aaa);background:rgba(232,141,103,0.1);padding:2px 7px;border-radius:3px}
 .qlist-arrow{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:var(--text-copper-aaa);opacity:0;transition:opacity var(--duration-base) var(--easing-base),transform 150ms var(--apple-spring)}
 .qlist a:hover .qlist-arrow{opacity:1;transform:translate(4px,-50%)}
+.answer-figure{margin:1.5rem 0;padding:0}.answer-figure img{display:block;width:100%;max-width:100%;height:auto;border-radius:8px;border:1px solid #EEE4DD}
