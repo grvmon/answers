@@ -108,14 +108,14 @@
   display: flex !important;
   align-items: center !important;
   text-decoration: none !important;
-  margin-right: 10px !important;
+  margin-right: 32px !important;
 }
 
 .brand-logo-text,
 .brand-inline-text {
   font-family: var(--font-brand), 'Josefin Sans', sans-serif !important;
   font-weight: 400 !important;
-  font-size: 2.05rem !important;
+  font-size: 2.2rem !important;
   letter-spacing: -0.02em !important;
   text-transform: lowercase !important;
   line-height: 1 !important;
@@ -137,13 +137,14 @@
 }
 
 .nav-links a {
-  font-family: 'Manrope', sans-serif !important;
+  font-family: var(--font-body), 'Manrope', sans-serif !important;
   font-size: 11px !important;
   font-weight: 600 !important;
   letter-spacing: 0.2em !important;
   text-transform: uppercase !important;
+  white-space: nowrap !important;
   color: #FFFFFF !important;
-  opacity: 1 !important;
+  opacity: 0.9 !important;
   text-decoration: none !important;
   padding: 6px 0 !important;
   background: transparent !important;
@@ -259,6 +260,15 @@
 .nav-cta-btn:hover .cta-arrow-badge svg,
 .mobile-drawer-cta:hover .cta-arrow-badge svg {
   transform: translate(1.5px, -1.5px) !important;
+}
+
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 16px !important;
+  }
+  .nav-brand {
+    margin-right: 16px !important;
+  }
 }
 
 @media (max-width: 991px) {

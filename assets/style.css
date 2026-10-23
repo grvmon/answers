@@ -133,13 +133,14 @@ main table{display:block;max-width:100%;overflow-x:auto}
 .search-clear-btn[hidden]{display:none!important}
 .search-shortcut[hidden]{display:none!important}
 
-/* Filter Pills */
+/* Filter Pills - acre&key Anti-Pill Blueprint Geometry (Strict 4px) */
 .filter-pills-wrap{margin-top:var(--space-md);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.filter-pill{appearance:none;background:var(--pure-white);color:var(--neutral-grey);border:var(--border-width) solid var(--border-color);border-radius:20px;padding:6px 14px;font-family:var(--font-sans);font-size:0.8rem;font-weight:600;cursor:pointer;transition:all var(--duration-base) var(--easing-base);display:inline-flex;align-items:center;gap:6px;line-height:1.3}
-.filter-pill:hover{border-color:var(--text-copper-aaa);color:var(--obsidian-black)}
-.filter-pill.active{background:var(--obsidian-black);color:var(--pure-white);border-color:var(--obsidian-black)}
-.filter-pill .pill-count{font-size:0.75rem;opacity:0.75;font-weight:500}
-.filter-pill.active .pill-count{opacity:0.85;color:var(--highlight-peach)}
+.filter-pill{appearance:none;background:rgba(10,10,11,0.04);color:#334155;border:0.5px solid rgba(85,85,90,0.2);border-radius:4px;padding:6px 12px;font-family:var(--font-sans);font-size:0.82rem;font-weight:600;cursor:pointer;transition:background 0.25s ease,border-color 0.25s ease,color 0.25s ease,transform 0.12s ease;display:inline-flex;align-items:center;gap:6px;line-height:1.3;letter-spacing:-0.01em}
+.filter-pill:hover{color:#0f172a;background:rgba(10,10,11,0.08);border-color:rgba(85,85,90,0.35)}
+.filter-pill.active{background:#172129;color:var(--pure-white);border-color:#172129;box-shadow:0 1px 3px rgba(0,0,0,0.12)}
+.filter-pill:active{transform:scale(0.975)}
+.filter-pill .pill-count{font-size:0.75rem;color:#64748b;font-weight:500;transition:color 0.2s ease}
+.filter-pill.active .pill-count{color:var(--highlight-peach);opacity:0.95}
 
 /* Featured Starter Questions Grid */
 .featured-cluster{margin-top:var(--space-xl);padding-top:var(--space-lg);border-top:var(--border-width) solid var(--border-color)}
