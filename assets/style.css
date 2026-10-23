@@ -98,19 +98,18 @@ blockquote{margin:0 0 var(--space-lg);padding:var(--space-md) var(--space-lg);bo
 #direct-answer{padding:14px 18px!important;background:rgba(128,69,38,0.04)!important;border-left:3px solid var(--text-copper-aaa)!important;border-radius:0 6px 6px 0!important;margin:0 0 var(--space-md)!important;font-size:1.02rem!important;line-height:1.55!important;color:var(--obsidian-black)!important}
 #direct-answer strong:first-child{color:var(--text-copper-aaa)!important;font-family:var(--font-sans)!important;text-transform:uppercase!important;font-size:0.75rem!important;letter-spacing:0.08em!important;display:block!important;margin-bottom:4px!important}
 
-/* Modern Author Bio (Bottom Box) */
-.author-bio-card{margin:var(--space-xl) 0 0!important;padding:22px 24px!important;border-radius:var(--radius)!important;background:var(--pure-white)!important;border:1px solid rgba(0,0,0,0.09)!important;box-shadow:0 2px 12px rgba(43,45,49,0.03)!important;display:flex!important;gap:20px!important;align-items:flex-start!important}
-@media (max-width:640px){.author-bio-card{flex-direction:column!important;align-items:center!important;text-align:center!important;padding:18px!important}}
-.author-bio-avatar-wrap{flex-shrink:0!important}
-.author-bio-avatar{width:72px!important;height:72px!important;min-width:72px!important;min-height:72px!important;border-radius:50%!important;object-fit:cover!important;border:2.5px solid #0077b5!important;box-shadow:0 3px 10px rgba(0,0,0,0.1)!important;display:block!important}
-.author-bio-content{flex-grow:1!important}
-.author-bio-kicker{font-size:0.7rem!important;font-weight:700!important;text-transform:uppercase!important;letter-spacing:0.08em!important;color:var(--text-copper-aaa)!important;margin-bottom:4px!important}
-.author-bio-header{display:flex!important;align-items:center!important;gap:8px!important;margin-bottom:4px!important;flex-wrap:wrap!important}
-@media (max-width:640px){.author-bio-header{justify-content:center!important}}
-.author-bio-name{font-family:var(--font-sans)!important;font-size:1.15rem!important;font-weight:700!important;color:var(--obsidian-black)!important;text-decoration:none!important}
+/* Modern Author Bio (Bottom Box) - Structured Editorial */
+.author-bio-card{margin:var(--space-xl) 0 0!important;padding:18px 20px!important;border-radius:8px!important;background:var(--pure-white)!important;border:1px solid rgba(85,85,90,0.12)!important;box-shadow:0 2px 8px rgba(0,0,0,0.03)!important;display:flex!important;flex-direction:column!important}
+.author-bio-top{display:flex!important;align-items:center!important;gap:14px!important;margin-bottom:12px!important}
+.author-bio-avatar-wrap{flex:0 0 52px!important;width:52px!important;height:52px!important}
+.author-bio-avatar{width:52px!important;height:52px!important;min-width:52px!important;min-height:52px!important;border-radius:50%!important;object-fit:cover!important;border:1px solid rgba(85,85,90,0.18)!important;box-shadow:0 1px 4px rgba(0,0,0,0.06)!important;display:block!important}
+.author-bio-meta{display:flex!important;flex-direction:column!important;gap:2px!important;min-width:0!important;flex:1 1 auto!important}
+.author-bio-kicker{font-size:0.68rem!important;font-weight:700!important;text-transform:uppercase!important;letter-spacing:0.08em!important;color:var(--text-copper-aaa)!important}
+.author-bio-header{display:flex!important;align-items:center!important;gap:6px!important;line-height:1.2!important}
+.author-bio-name{font-family:var(--font-sans)!important;font-size:1.05rem!important;font-weight:700!important;color:var(--obsidian-black)!important;text-decoration:none!important;letter-spacing:-0.01em!important}
 .author-bio-name:hover{color:var(--text-copper-aaa)!important}
-.author-bio-role{font-family:var(--font-sans)!important;font-size:0.82rem!important;font-weight:600!important;color:var(--neutral-grey)!important;margin-bottom:8px!important}
-.author-bio-text{font-size:0.88rem!important;line-height:1.55!important;color:var(--obsidian-black)!important;margin:0!important}
+.author-bio-role{font-family:var(--font-sans)!important;font-size:0.78rem!important;font-weight:600!important;color:var(--neutral-grey)!important;line-height:1.35!important}
+.author-bio-text{font-size:0.86rem!important;line-height:1.6!important;color:#2b2d31!important;margin:0!important;text-align:left!important;padding-top:11px!important;border-top:1px solid rgba(85,85,90,0.08)!important}
 
 .answer .disclosure{font-size:0.9rem;line-height:1.5;margin:0 0 var(--space-xl);padding:var(--space-md) var(--space-lg);border-left:3px solid var(--text-copper-aaa);background:rgba(0,0,0,0.03)}
 /* mobile: no horizontal scroll from long links or wide tables */
