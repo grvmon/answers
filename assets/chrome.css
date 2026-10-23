@@ -567,7 +567,7 @@ body.drawer-open {
 .ak-footer a {
   color: #FAFAFA;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.4s ease;
 }
 
 .ak-footer a:hover {
@@ -576,10 +576,25 @@ body.drawer-open {
   text-underline-offset: 3px;
 }
 
+.ak-footer .ak-footer-logo:hover,
+.ak-footer .ak-footer-logo:focus,
+.ak-footer .footer-logo-wordmark:hover,
+.ak-footer .footer-logo-wordmark:focus {
+  text-decoration: none !important;
+  color: #E88D67 !important;
+}
+
 .ak-footer .ak-footer-address {
   font-size: 12.5px;
   line-height: 1.45;
   color: rgba(250, 250, 250, 0.7);
+}
+
+.ak-footer .ak-footer-address:hover,
+.ak-footer .ak-footer-address:focus {
+  color: #E88D67 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .ak-footer .ak-footer-links {
@@ -599,13 +614,32 @@ body.drawer-open {
 }
 
 .ak-footer .ak-footer-social .footer-social-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #FAFAFA;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-decoration: none !important;
+  transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease !important;
+}
+
+.ak-footer .ak-footer-social .footer-social-btn:hover,
+.ak-footer .ak-footer-social .footer-social-btn:focus {
+  background: #E88D67 !important;
+  border-color: #E88D67 !important;
+  color: #2B2D31 !important;
+  text-decoration: none !important;
+  transform: none !important;
+}
+
+.ak-footer a:focus-visible,
+.ak-footer .footer-social-btn:focus-visible {
+  outline: 2px solid #E88D67 !important;
+  outline-offset: 3px !important;
 }
 
 .ak-footer .ak-footer-rera {
