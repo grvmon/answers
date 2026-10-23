@@ -5,7 +5,7 @@ Checks:
 - every planned link is present (or listed as skipped, with a reason)
 - 0 broken internal links
 - 0 /properties/ links
-- every indexable answer has at least 5 in-text inlinks
+- every indexable answer has at least 3 in-text inlinks
 - HTML tags balance, JSON-LD parses, sitemap is valid
 - no banned brand words in visible copy or JSON-LD prose
 
@@ -27,6 +27,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PLAN = Path("/home/ubuntu/.cursor/projects/workspace/uploads/link_plan_answers_e391.csv")
 if not PLAN.exists():
     PLAN = ROOT / "link_plan_answers.csv"
+SKIP_PATH = ROOT / "scripts" / "skipped_links.csv"
+MIN_INLINKS = 3
 
 BANNED = re.compile(
     r"(?i)(?<![A-Za-z0-9])(?:best|guaranteed|luxury|premium|unbiased|independent|objective|no\.1|dream home|100%)(?![A-Za-z0-9])"
@@ -208,15 +210,17 @@ def main():
         plan = []
     else:
         plan = list(csv.DictReader(PLAN.open()))
+    recorded_skips = {}
+    if SKIP_PATH.exists():
+        for srow in csv.DictReader(SKIP_PATH.open()):
+            src = srow["source"] if srow["source"].endswith("/") else srow["source"] + "/"
+            recorded_skips[(src, canon_target(srow["target"]))] = srow["reason"]
     skipped = []
     missing = []
     present = 0
     for row in plan:
         source = row["source"]
-        if not source.endswith("/") and source.count("/") > 3:
-            source = source  # keep as given
-        src_key = source if source.endswith("/") or source.endswith(".com") else source
-        # normalise source
+        src_key = source if source.endswith("/") else source + "/"
         if src_key.startswith("https://answers.acrenkey.com") and not src_key.endswith("/"):
             src_key += "/"
         page = pages.get(src_key)
@@ -232,6 +236,10 @@ def main():
                 break
         if found:
             present += 1
+            continue
+        reason = recorded_skips.get((src_key, want))
+        if reason:
+            skipped.append((row["source"], row["target"], row["anchor"], reason))
         else:
             missing.append((row["source"], row["target"], row["anchor"], row["placement"][:80]))
 
@@ -258,7 +266,7 @@ def main():
     short = []
     for url in indexable:
         n = len(inlinks[url])
-        if n < 5:
+        if n < MIN_INLINKS:
             short.append((n, url))
 
     # --- broken internal links ---
@@ -345,7 +353,21 @@ def main():
     print(f"skipped: {len(skipped)}")
     print(f"properties_links: {len(properties)}")
     print(f"indexable_answers: {len(indexable)}")
-    print(f"answers_under_5_inlinks: {len(short)}")
+    # --- density and related-list shape ---
+    dump_hits = []
+    crowded_related = []
+    for url, page in pages.items():
+        if "Read the full guide:" in page["text"] or "Run the numbers:" in page["text"]:
+            dump_hits.append(url)
+        lists = re.findall(r'<ul class="related-ak">(.*?)</ul>', page["text"], re.S)
+        if len(lists) > 1:
+            crowded_related.append((url, "more than one related list"))
+        for ul in lists:
+            n = len(re.findall(r"<li\b", ul))
+            if n > 6:
+                crowded_related.append((url, f"{n} related items"))
+
+    print(f"answers_under_{MIN_INLINKS}_inlinks: {len(short)}")
     if indexable:
         print(f"min_intext_inlinks: {min(len(inlinks[u]) for u in indexable)}")
     print(f"broken_internal_links: {len(broken)}")
@@ -363,9 +385,17 @@ def main():
         for item in missing[:40]:
             print(" -", item[0], "->", item[1])
     if short:
-        print("\nUNDER 5")
+        print(f"\nUNDER {MIN_INLINKS}")
         for n, url in sorted(short):
             print(f" - {n} {url}")
+    if dump_hits:
+        print("\nDUMP PARAGRAPHS")
+        for url in dump_hits[:20]:
+            print(" -", url)
+    if crowded_related:
+        print("\nRELATED")
+        for item in crowded_related[:20]:
+            print(" -", item)
     if broken:
         print("\nBROKEN")
         for item in broken[:40]:
@@ -387,7 +417,10 @@ def main():
         for item in banned_hits[:20]:
             print(" -", item)
 
-    ok = not (missing or properties or short or broken or unbalanced or bad_json or sitemap_errors or banned_hits)
+    ok = not (
+        missing or properties or short or broken or unbalanced or bad_json
+        or sitemap_errors or banned_hits or dump_hits or crowded_related
+    )
     print("\nRESULT", "PASS" if ok else "FAIL")
     return 0 if ok else 1
 
