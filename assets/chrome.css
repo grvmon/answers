@@ -409,8 +409,8 @@ body.drawer-open {
 
 .mobile-drawer-brand .brand-logo-text {
   color: #2B2D31 !important;
-  letter-spacing: -0.02em;
-  font-size: 1.98rem;
+  letter-spacing: -0.02em !important;
+  font-size: 1.98rem !important;
 }
 
 .mobile-drawer-close {
