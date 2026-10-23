@@ -11,7 +11,7 @@
 @media (min-width:1024px){:root{--section-space:110px}}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--titanium-frost);color:var(--neutral-grey);font-family:var(--font-sans);font-size:0.95rem;line-height:1.6}
+body{margin:0;padding-top:80px;background:var(--titanium-frost);color:var(--neutral-grey);font-family:var(--font-sans);font-size:0.95rem;line-height:1.6}
 /* Container matches acrenkey.com/blogs/ .container: 1280px max, 16px side padding, 24px from 768px */
 .wrap{width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--space-md)}
 @media (min-width:768px){.wrap{padding:0 var(--space-lg)}}
@@ -39,7 +39,8 @@ a:hover{text-decoration-color:currentColor}
 .btn-secondary{border:var(--border-width) solid var(--obsidian-black);color:var(--obsidian-black)}
 .btn-secondary:hover{background:var(--obsidian-black);color:var(--pure-white)}
 /* hub */
-.hero{padding:var(--section-space) 0 var(--space-xl)}
+.hero{padding:var(--space-xl) 0 var(--space-xl)}
+@media (min-width:1024px){.hero{padding:var(--space-2xl) 0 var(--space-xl)}}
 .search{width:100%;min-height:48px;margin-top:var(--space-lg);padding:0 var(--space-md);font:inherit;color:var(--obsidian-black);background:var(--pure-white);border:var(--border-width) solid var(--neutral-grey);border-radius:var(--radius)}
 .list-band{background:var(--pure-white);padding:var(--space-xl) 0 var(--section-space);border-top:var(--border-width) solid var(--border-color)}
 .qlist{list-style:none;margin:0;padding:0;border-top:var(--border-width) solid var(--border-color)}
@@ -54,7 +55,7 @@ a:hover{text-decoration-color:currentColor}
 .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:var(--space-xs);margin:0;padding:0}
 .crumbs li+li::before{content:"›";margin-right:var(--space-xs);color:var(--neutral-grey)}
 .crumbs [aria-current]{color:var(--neutral-grey);font-weight:500}
-.answer{padding:var(--space-xl) 0 var(--section-space)}
+.answer{padding:var(--space-lg) 0 var(--section-space)}
 .answer .byline{font-size:0.85rem;margin-bottom:var(--space-xl)}
 .answer>p:first-of-type+p,.answer .byline+p{font-size:1.05rem}
 .answer li{margin-bottom:var(--space-sm)}
