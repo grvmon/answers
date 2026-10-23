@@ -196,6 +196,7 @@
   border: none !important;
   color: #FFFFFF !important;
   transform: none !important;
+  text-decoration: none !important;
 }
 
 .primary-cta-btn:focus-visible,
