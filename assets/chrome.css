@@ -195,6 +195,17 @@
   box-shadow: none !important;
   border: none !important;
   color: #FFFFFF !important;
+  transform: none !important;
+}
+
+.primary-cta-btn:focus-visible,
+.nav-cta-btn:focus-visible,
+.mobile-drawer-cta:focus-visible,
+.lf-btn:focus-visible,
+.sd-btn-gold:focus-visible {
+  outline: 2px solid #E88D67 !important;
+  outline-offset: 3px !important;
+  box-shadow: none !important;
 }
 
 .primary-cta-btn:active,
